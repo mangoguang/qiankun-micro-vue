@@ -5,11 +5,31 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/fileUpload">FileUpload</router-link> |
       <router-link to="/fileSliceUpload">FileSliceUpload</router-link>
+      <Button @click="toAboutPage" type>to about page</Button>
     </div>
-    <p>qiankun-micro-vue</p>
+    <p>qiankun-micro-vue1</p>
     <router-view/>
   </div>
 </template>
+
+<script>
+import { Button } from 'ant-design-vue'
+
+export default {
+  name: 'Home',
+  components: {
+    Button
+    // HelloWorld
+  },
+  methods: {
+    toAboutPage () {
+      window.history.pushState({
+        pageName: 'about'
+      }, '', '/system/about')
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {

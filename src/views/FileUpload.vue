@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <input @change="fileChange" type="file">
     <img :src="base64String" alt="" style="width: 400px;">
+    <p>123</p>
   </div>
 </template>
 
